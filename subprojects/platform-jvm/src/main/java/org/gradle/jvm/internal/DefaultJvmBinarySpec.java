@@ -81,6 +81,7 @@ public class DefaultJvmBinarySpec extends BaseBinarySpec implements JvmBinarySpe
         return assembly;
     }
 
+    @SafeVarargs
     public static List<DependencySpec> collectDependencies(final BinarySpec binary, @Nullable final SourceComponentSpec owner, final Collection<DependencySpec>... specificDependencies) {
         List<DependencySpec> dependencies = Lists.newArrayList();
         if (specificDependencies!=null) {
